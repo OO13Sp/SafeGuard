@@ -1,0 +1,44 @@
+.mainContent{
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    overflow: auto;
+    border-radius: 8px;
+
+
+    .bottom{
+        margin-top: 2rem;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}
+
+
+.dark-theme {
+    background-color: #e7a848; /* Dark theme background color */
+    color: #fff; /* Dark theme text color */
+    
+    .activity-container {
+      background-color: #e0af65; /* Dark theme background color for activity container */
+      color: black; /* Dark theme text color for activity container */
+    }
+  }
+
+  .light-theme{
+    background-color: #494744; /* Dark theme background color */
+    color: #fff; /* Dark theme text color */
+    
+    .activity-container {
+      background-color: #1f1e1c; /* Dark theme background color for activity container */
+      color: rgb(252, 252, 252); /* Dark theme text color for activity container */
+    }
+
+  }
+  
+  
+  
+  .Middletext {
+    text-align: center;
+    margin-top: 20px;
+  }
+  

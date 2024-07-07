@@ -1,0 +1,121 @@
+:root {
+    --primaryColor: hsl(94, 55%, 56%);
+    --hoverColor: hsl(93, 75%, 76%);
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 75%);
+    --inputColor: hsl(0, 0%, 75%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.sideBar {
+  
+     /* Fixed at 40% of the window width */
+      /* Ensures it doesn't exceed 40% */
+  max-width: 40%;
+     
+    height: 100%;
+    background: rgb(107, 107, 107);
+    box-shadow: 1px 0px 4px var(--greyText);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: auto;
+    transition: width 0.3s;
+    
+    
+
+    &.closed {
+        width: 2%;
+        min-width: 6%;
+        .logoDiv {
+            flex-direction: column;
+            align-items: center;
+            img {
+                display: none;;
+            }
+            h2 {
+                margin-top: 0.5rem;
+            }
+        }
+        .menuDiv, .settingsDiv, .divTitle, .menuLists, .listItem, .menuLink {
+            display: none;
+        }
+    }
+}
+
+.logoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; // Added to distribute space between logo and text
+    padding: 1rem;
+    cursor: pointer;
+
+    img {
+        max-width: 100px;
+        border-radius: 2px;
+        padding: .2rem;
+        min-width: 50px;
+    }
+
+    h2 {
+        margin-top: 0; // Reset margin
+        margin-bottom: 0.5rem; // Adjusted margin for spacing
+        font-size: var(--h2FontSize);
+        text-align: center;
+    }
+
+    .toggleButton {
+        background: none;
+        border: none;
+        color: var(--blackColor);
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+.menuDiv, .settingsDiv {
+    padding: 0 1rem;
+}
+
+.divTitle {
+    margin-bottom: rem;
+    font-size: var(--h2FontSize);
+}
+
+.menuLists {
+    list-style: none;
+    padding: 0;
+}
+
+.listItem {
+    margin-bottom: 3rem;
+}
+
+.menuLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--blackColor);
+
+    .icon {
+        margin-right: .5rem;
+        min-width: 1rem;
+    }
+
+    .smallTextt {
+        font-size: var(--normalFontSize);
+    }
+}

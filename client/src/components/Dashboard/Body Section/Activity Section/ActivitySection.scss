@@ -1,0 +1,173 @@
+.activity-container {
+  margin-top: 20px;
+  flex: 1; /* Allow the container to grow */
+  background-color: #f5f5f5;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #856049;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 13rem;;
+}
+
+.Middletext {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container {
+    margin-top: 2rem;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7f30;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #161615;
+  }
+}
+
+.password-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.password-form.show-form {
+  max-height: 900px; /* Adjust the maximum height as needed */
+  opacity: 1;
+  visibility: visible;
+}
+
+.password-form label,
+.password-form input,
+.password-form select,
+.password-form button {
+  margin-bottom: 10px; /* Add space between form items */
+  width: 100%;
+}
+
+.activity-container.show-form .password-form {
+  max-height: 900px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.button-group {
+  
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.password-list {
+  margin-top: 2rem;;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px; /* Add padding to align with password items */
+  width: 100%; /* Ensure full width */
+  gap: 2rem;
+}
+
+.password-item {
+  display: flex;
+flex-wrap: wrap;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out items horizontally */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ff7f30;
+  min-width: 10rem;
+  flex: 1 1 0;
+  max-width: 40rem;
+  min-width: 11rem;
+  
+  
+}
+
+.password-item img {
+  display: block;
+  margin-top: 10px;
+}
+.password-text {
+  flex: 1; /* Text takes up remaining space */
+
+}
+.company-logo {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin-left: 10px; /* Add margin to separate from text */
+}
+.password-logo {
+  margin-left: 10px; /* Add some space between text and logo */
+}
+@media screen and (max-width: 768px) {
+  .password-item {
+    width: calc(50% - 20px); /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .password-item {
+    width: calc(100% - 20px); /* Adjust width for even smaller screens */
+  }
+}
+
+.password-strength-meter {
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  display: flex;
+}
+
+.strength-bar {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.very-weak {
+  background-color: red;
+}
+
+.weak {
+  background-color: orange;
+}
+
+.fair {
+  background-color: yellow;
+}
+
+.good {
+  background-color: lightgreen;
+}
+
+.strong {
+  background-color: green;
+}

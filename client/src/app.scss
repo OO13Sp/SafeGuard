@@ -1,0 +1,179 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+:root {
+    --primaryColor: hsl(94, 55%, 56%);
+    --hoverColor: hsl(93, 75%, 76%);
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 75%);
+    --inputColor: hsl(0, 0%, 75%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+/* Reset and utilities */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video {
+    height: auto;
+    width: 100%;
+}
+
+.message {
+    display: none;
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    background: rgba(255, 0, 0);
+    border-radius: 3px;
+    text-align: center;
+    color: var(--greyText);
+}
+
+.btn .icon {
+    margin-left: .5rem;
+}
+
+.btn:hover {
+    color: rgb(61, 61, 61);
+    background: rgb(61, 61, 61);
+}
+
+/* Layout and positioning */
+.LoginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.videoBackground video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formOverlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerDiv img {
+    width: 150px; /* Increased the size of the logo */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.headerDiv h3 {
+    margin-bottom: 2rem;
+}
+.grid{
+    gap: 1.5rem;
+}
+
+.form.grid {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inputDiv {
+    width: 100%;
+}
+
+.inputDiv .input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--greyText);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background: white;
+}
+
+.inputDiv .input input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.inputDiv .input .icon {
+    margin-right: 0.5rem;
+}
+
+.btn.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background: rgb(61, 61, 61);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.forgot-password, .register-link {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.forgot-password a, .register-link a {
+    color:rgb(61, 61, 61);
+    text-decoration: underline;
+}
+
+.forgot-password a:hover, .register-link a:hover {
+    color: var(--hoverColor);
+}
